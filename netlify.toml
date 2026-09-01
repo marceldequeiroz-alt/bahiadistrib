@@ -1,0 +1,12 @@
+# Configuração do site no Netlify.
+# A pasta publicada é a raiz do projeto; as funções ficam em netlify/functions.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# URL amigável opcional: /api/base atende o mesmo que a função.
+[[redirects]]
+  from = "/api/base"
+  to = "/.netlify/functions/base"
+  status = 200
